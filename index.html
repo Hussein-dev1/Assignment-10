@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- =============== favicon =============== -->
+    <link rel="icon" href="./image/bookmark.png" />
+    <!-- =============== Font Awesome =============== -->
+    <link rel="stylesheet" href="./style/all.min.css" />
+    <!-- =============== Fonts =============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- =============== Bootstrap =============== -->
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <!-- =============== Style =============== -->
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+  <main class=" py-5 position-relative z-0">
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+          <h1>Bookmarker</h1>
+          <div
+              class="bookmark-body mt-5 py-4 p-3 w-100 d-flex flex-column justify-content-center align-items-center gap-4">
+              <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+              <div class="site-name w-100">
+                  <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                  <input id="siteName" oninput="validateInput(this)" class="form-control" type="text" placeholder="Bookmark Name" aria-label="default input example">
+              </div>
+              <div class="site-url w-100">
+                  <label for="siteURL" class="form-label"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                  <input id="siteURL" oninput="validateInput(this)" class="form-control" type="text" placeholder="Web Site URL" aria-label="default input example">
+              </div>
+              <button onclick="addSite()" class="btn btn-danger px-5" type="submit">Submit</button>
+          </div>
+          <table class="table mt-4 text-center bg-light">
+              <thead>
+                  <tr>
+                      <th class="text-capitalize">index</th>
+                      <th class="text-capitalize">Website Name</th>
+                      <th class="text-capitalize">Visit</th>
+                      <th class="text-capitalize">Delete</th>
+                  </tr>
+              </thead>
+              <tbody id="tableContent">
+              </tbody>
+          </table>
+      </div>
+  </main>
+  <script src="./java/main.js"></script>
+
+</body>
+
+
+</html>

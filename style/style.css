@@ -1,0 +1,46 @@
+body {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+*::selection {
+    background-color: #FEC160;
+    color: #352E28;
+}
+
+main {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-size: 3.125rem;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #fec260;
+    height: 25%;
+    bottom: 0px;
+    z-index: -1;
+    transition: all 350ms;
+}
+h1:hover::before {
+    height: 70%;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: "Righteous", cursive;
+    color: #352e28;
+    background-image: linear-gradient(to right,green, #b5ac49);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+.bookmark-body {
+    border-width: 2px 0;
+    border-style: dotted;
+}
